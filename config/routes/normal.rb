@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   end
   resources :events, :only => [:index, :show] do
   end
-  resources :place, :only => [:index, :show] do
+  resources :places, :only => [:index, :show] do
   end
 end
