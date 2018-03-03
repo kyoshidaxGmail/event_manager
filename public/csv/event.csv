@@ -1,6 +1,6 @@
 title,description,imageUrl,type,oneDay,allDay,startDay,endDay,startTime,endTime,eventUrl,place,numberOfPeople,cost
-いべんと1,aaaa,https://www.enjoytokyo.jp/feature/season/halloween/img/top_entry.png,red,TRUE,TRUE,2018/3/10,,,,https://www.google.co.jp/,ここ,10人,100円
-event2,楽しい楽しい遠足です,,yellow,TRUE,FALSE,2018/3/2,,12:00,14:00,https://www.google.co.jp/,ここ,10人,100円
+ああいべんと1,aaaa,https://www.enjoytokyo.jp/feature/season/halloween/img/top_entry.png,red,TRUE,TRUE,2018/3/10,,,,https://www.google.co.jp/,松戸運動公園,10人,100円
+aaevent2,楽しい楽しい遠足です,,yellow,TRUE,FALSE,2018/3/2,,12:00,14:00,https://www.google.co.jp/,こここ,10人,100円
 event3,ううううううう,,blue,FALSE,TRUE,2018/3/10,2018/3/20,,,,,,
 event4,えええええええ,,aqua,FALSE,FALSE,2018/3/2,2018/3/4,12:00,14:00,,,,
 event5,おおおおおおお,,green,TRUE,TRUE,2018/3/5,,,,https://www.google.co.jp/,,,

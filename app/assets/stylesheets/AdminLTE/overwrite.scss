@@ -152,6 +152,29 @@
   padding-top: 10px;
 }
 
+.info-box {
+  padding-top: 0;
+  .info-box-img {
+    width: 90px;
+    height: 130px;
+    position: absolute;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+  }
+  .info-box-title {
+    font-size: 18px;
+  }
+  .info-box-buttons {
+    bottom: 20px;
+    width: 200px;
+    height: 20px;
+    display: block;
+    position: absolute;
+  }
+}
+
 @media (min-width: 768px) {
   .large-box {
     width: calc(100% - 400px);

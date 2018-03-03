@@ -45,6 +45,7 @@ function make_event_show(events, eventId) {
   } else {
     $('#ev-image').hide();
   }
+  init_places('setPlaceInfo', "", myEvent['place']);
 }
 
 function make_calendar(events) {
