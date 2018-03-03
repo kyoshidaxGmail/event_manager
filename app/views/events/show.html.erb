@@ -1,0 +1,60 @@
+<div class="content-wrapper" id="myBox">
+  <!-- Content Header (Page header) -->
+  <%= render partial: "calendar/content_header" %>
+  <!-- Main content -->
+  <section class="content">
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-globe"></i>
+            <span id='ev-title'>##title##</span>
+          </h2>
+        </div><!-- /.col -->
+      </div>
+      <!-- info row -->
+      <div class="row invoice-info">
+        <div class="col-sm-8 invoice-col">
+          <span id='ev-description'>##description</span>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+          <b>場所: </b><span id='ev-place'>##place</span>
+          <br>
+          <b>日時: </b><span id='ev-datetime'>##date time</span>
+          <br>
+          <b>参加費: </b><span id='ev-cost'>##cost</span>
+          <br>
+          <b>参加人数: </b><span id='ev-numberOfPeople'>##Number of people</span>
+          <br>
+          <b>URL: </b><a href='' id='ev-eventUrl'>##url</a>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- Table row -->
+      <img class="row" id="ev-image" src="">
+      </img>
+      <!-- /.row -->
+
+      <!-- this row will not appear when printing -->
+      <div class="row no-print" id='ev-button'>
+        <div class="col-xs-12">
+          <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+          <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+            <i class="fa fa-download"></i>
+            <span>申し込む</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
+<% content_for :script do %>
+  <%= javascript_include_tag 'AdminLTE_calendar', charset: 'UTF-8', 'data-turbolinks-track': 'reload' %>
+  <script>
+    init_events('eventShow', <%= params[:id] %>);
+  </script>
+<% end %>

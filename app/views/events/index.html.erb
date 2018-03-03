@@ -1,0 +1,33 @@
+<div class="content-wrapper" id="myBox">
+  <!-- Content Header (Page header) -->
+  <%= render partial: "calendar/content_header" %>
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12 table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>イベント名</th>
+              <th>日時:</th>
+              <th>場所</th>
+              <th>参加費</th>
+              <th>詳細</th>
+            </tr>
+          </thead>
+          <tbody id='ev-eventList'>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.col -->
+    </div>
+  </section>
+</div>
+<% content_for :script do %>
+  <%= javascript_include_tag 'AdminLTE_calendar', charset: 'UTF-8', 'data-turbolinks-track': 'reload' %>
+  <script>
+    init_events('eventIndex');
+  </script>
+<% end %>
+
+

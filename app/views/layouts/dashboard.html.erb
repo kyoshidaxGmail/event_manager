@@ -1,0 +1,40 @@
+<!-- layout/admin_lte_test -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render partial: "layouts/head_item" %>
+    <%= stylesheet_link_tag 'AdminLTE', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag 'AdminLTE_map', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= yield :style %>
+    <%= javascript_include_tag 'AdminLTE', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_include_tag 'AdminLTE_flot', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_include_tag 'AdminLTE_map', 'data-turbolinks-track': 'reload' %>
+    <%= yield :script %>
+    <script>
+      // Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
+      $.widget.bridge('uibutton', $.ui.button);
+    </script>
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+      <%= render partial: "layouts/dashboard/header" %>
+      <!-- Left side column. contains the logo and sidebar -->
+      <%= render partial: "layouts/dashboard/aside" %>
+      <!-- Content Wrapper. Contains page content -->
+      <%= yield %>
+      <%#= render partial: "layout/dashboard/index/content_wrapper" %>
+      <%= render partial: "layouts/dashboard/footer" %>
+      <%= render partial: "layouts/dashboard/control_sidebar" %>
+      <!-- Add the sidebar's background. This div must be placed
+      immediately after the control sidebar -->
+      <div class="control-sidebar-bg"></div>
+    </div>
+<!-- ./wrapper -->
+    <!-- <p class="notice">
+      <%= notice %>
+    </p>
+    <p class="alert">
+      <%= alert %>
+    </p> -->
+  </body>
+</html>

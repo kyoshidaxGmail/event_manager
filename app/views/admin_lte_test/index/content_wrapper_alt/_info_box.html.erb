@@ -1,0 +1,20 @@
+<%
+  numerator = 41410
+  denominator = 100000
+  percentage = (numerator / denominator.to_f).round(3) * 100
+%>
+
+<div class="info-box bg-aqua">
+  <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
+
+  <div class="info-box-content">
+    <span class="info-box-text">売上</span>
+    <span class="info-box-number"><%= numerator.to_s(:delimited) %> / <%= denominator.to_s(:delimited) %></span>
+    <div class="progress">
+      <div class="progress-bar" style="width: <%= percentage %>%"></div>
+    </div>
+    <span class="progress-description"> <%= percentage %> % </span>
+  </div>
+  <!-- /.info-box-content -->
+</div>
+<!-- /.info-box -->

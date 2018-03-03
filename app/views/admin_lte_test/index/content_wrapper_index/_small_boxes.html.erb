@@ -1,0 +1,37 @@
+<%
+ if box_type == 1
+    div_class = "bg-aqua"
+    my_val = 150
+    my_name = "New Orders"
+    my_icon = "ion-bag"
+  elsif box_type == 2
+    div_class = "bg-green"
+    my_val = 53
+    my_name = "Bounce Rate"
+    my_icon = "ion-stats-bars"
+  elsif box_type == 3
+    div_class = "bg-yellow"
+    my_val = 44
+    my_name = "User Registrations"
+    my_icon = "ion-person-add"
+  elsif box_type == 4
+    div_class = "bg-red"
+    my_val = 65
+    my_name = "Unique Visitors"
+    my_icon = "ion-pie-graph"
+  end
+%>
+
+<div class="small-box <%= div_class %>">
+  <div class="inner">
+    <h3><%= my_val %></h3>
+    <p>
+      <%= my_name %>
+    </p>
+  </div>
+  <div class="icon">
+    <i class="ion <%= my_icon %>"></i>
+  </div>
+  <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+</div>
+

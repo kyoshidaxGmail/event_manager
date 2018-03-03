@@ -1,0 +1,25 @@
+<div class="content-wrapper" id="myBox">
+  <!-- Content Header (Page header) -->
+  <%= render partial: "calendar/content_header" %>
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="box box-primary">
+            <!-- THE CALENDAR -->
+            <div id="calendar"></div>
+        </div><!-- /. box -->
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
+<% content_for :style do %>
+  <%= stylesheet_link_tag 'AdminLTE_calendar', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<% content_for :script do %>
+  <%= javascript_include_tag 'AdminLTE_calendar', 'data-turbolinks-track': 'reload' %>
+  <script>
+    init_events('calendar');
+  </script>
+<% end %>

@@ -1,0 +1,53 @@
+<% content_for :style do %>
+  <%= stylesheet_link_tag    'AdminLTE_index', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+<% content_for :script do %>
+  <%= javascript_include_tag 'AdminLTE_index', 'data-turbolinks-track': 'reload' %>
+<% end %>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <%= render partial: "admin_lte_test/index/content_wrapper_index/content_header" %>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <% for box_type in 1..4 do %>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <%= render partial: "admin_lte_test/index/content_wrapper_index/small_boxes", locals: { box_type: box_type } %>
+        </div>
+        <!-- ./col -->
+      <% end %>
+    </div>
+    <!-- /.row -->
+    <!-- Main row -->
+    <div class="row">
+      <!-- Left col -->
+      <section class="col-lg-7 connectedSortable">
+        <!-- Custom tabs (Charts with tabs)-->
+        <%= render partial: "admin_lte_test/index/content_wrapper_index/custom_tabs" %>
+        <!-- Chat box -->
+        <%= render partial: "admin_lte_test/index/content_wrapper_index/chat_box" %>
+        <!-- TO DO List -->
+        <%= render partial: "admin_lte_test/index/content_wrapper_index/to_do_list" %>
+        <!-- quick email widget -->
+        <%= render partial: "admin_lte_test/index/content_wrapper_index/quick_email_widget" %>
+      </section>
+      <!-- /.Left col -->
+      <!-- right col (We are only adding the ID to make the widgets sortable)-->
+      <section class="col-lg-5 connectedSortable">
+        <!-- Map box -->
+        <%= render partial: "admin_lte_test/index/content_wrapper_index/map_box" %>
+        <!-- solid sales graph -->
+        <%= render partial: "admin_lte_test/index/content_wrapper_index/solid_sales_graph" %>
+        <!-- Calendar -->
+        <%= render partial: "admin_lte_test/index/content_wrapper_index/calendar" %>
+      </section>
+      <!-- right col -->
+    </div>
+    <!-- /.row (main row) -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

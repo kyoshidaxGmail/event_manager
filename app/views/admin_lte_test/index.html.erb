@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <%= render partial: "admin_lte_test/index/header" %>
+  <!-- Left side column. contains the logo and sidebar -->
+  <%= render partial: "admin_lte_test/index/aside" %>
+  <!-- Content Wrapper. Contains page content -->
+  <% if params[:type] == "index" %>
+    <%= render partial: "admin_lte_test/index/content_wrapper_index" %>
+  <% elsif params[:type] == "flot" %>
+    <%= render partial: "admin_lte_test/index/content_wrapper_flot" %>
+  <% else %>
+    <%= render partial: "admin_lte_test/index/content_wrapper_alt" %>
+  <% end %>
+  <%= render partial: "admin_lte_test/index/footer" %>
+  <%= render partial: "admin_lte_test/index/control_sidebar" %>
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->

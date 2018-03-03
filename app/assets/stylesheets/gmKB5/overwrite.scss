@@ -1,0 +1,38 @@
+.sign_in_text {
+  display: block;
+  padding: 5px 10px;
+  label {
+    margin: 0;
+    font-weight: normal;
+  }
+}
+
+.account-wall {
+  padding: 10px 0px 3px 0px;
+}
+
+.profile-img {
+  height: 26px;
+}
+
+.form-signin input {
+  &[type="email"] {
+    border-radius: 0;
+  }
+
+  &[type="password"] {
+    margin-bottom: 0px;
+  }
+}
+
+.btn-primary {
+  background-color: $td_blue_lighter;
+  border: none;
+  &:hover{
+    background-color: $td_blue_deep;
+  }
+}
+
+a {
+  color: $td_blue_lighter;
+}

@@ -1,0 +1,38 @@
+<% content_for :script do %>
+  <%= javascript_include_tag 'AdminLTE_flot', 'data-turbolinks-track': 'reload' %>
+<% end %>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <%= render partial: "admin_lte_test/index/content_wrapper_alt/content_header" %>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <% for chart_no in 0..3 do %>
+        <div class="col-lg-3 col-xs-6">
+          <% if chart_no == 1 %>
+            <!-- info box -->
+            <%= render partial: "admin_lte_test/index/content_wrapper_alt/info_box" %>
+          <% elsif chart_no == 2 %>
+            <!-- schedule box -->
+            <%= render partial: "admin_lte_test/index/content_wrapper_alt/schedule_box" %>
+          <% else %>
+            <!-- interactive chart -->
+            <%= render partial: "admin_lte_test/index/content_wrapper_alt/interactive_chart", locals: { chart_no: chart_no } %>
+          <% end %>
+        </div>
+        <!-- ./col -->
+      <% end %>
+    </div>
+    <!-- /.row -->
+    <!-- Main row -->
+    <div class="row">
+      <div class="col-xs-12"></div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row (main row) -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
