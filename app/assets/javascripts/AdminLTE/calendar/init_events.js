@@ -88,7 +88,6 @@ function parse_event_csv(response_text) {
     var one_row_data = rows_data[i].split(',');
     // csv_data[i] = rows_data[i].split(',');
     var csv_event = {};
-
     var start_day = one_row_data[col['startDay']].split('/');
     var end_day;
     if (one_row_data[col['oneDay']] == 'TRUE') {
